@@ -1,0 +1,38 @@
+
+@font-face {
+    font-family: Gilroy-Light;
+    src: url(../Fonts/Gilroy-Light.woff);
+}
+
+form{ 
+    display:table; 
+    font-size:14px; 
+    margin:10px; 
+    font-family: Gilroy-Light; 
+    width: 35%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+data{ 
+    display:table-row; 
+    text-align:center; 
+    padding:10px; 
+} 
+
+header{ 
+    display: table-cell; 
+    border: solid 1px;
+    padding: 10px; 
+    width: 25%;
+    background-color: wheat;
+}
+
+fname, lname, email, pwd{ 
+    display: table-cell; 
+    border: solid 1px;
+    padding: 10px; 
+    width: 25%;
+}

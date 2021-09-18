@@ -1,0 +1,239 @@
+/* This is styling for the web form itself */
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(../Fonts/Gilroy-Bold.woff);
+}
+@font-face {
+  font-family: Gilroy-Light;
+  src: url(../Fonts/Gilroy-Light.woff);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+} 
+
+body{
+  font-family: Gilroy-Bold;
+  /* background-image: linear-gradient(red, yellow); */
+  /* background-image: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); */
+  background-image: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+div.main{
+  width: auto;
+  margin: 900px auto 0px auto;
+  background-image: -webkit-linear-gradient(to right, #fdbb2d, #22c1c3);  /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(to right, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+h2{
+  text-align: center;
+  margin-top: 50px;
+}
+
+div.register{
+  background-color:rgba(0, 0, 0, 0.5);
+  width: 40%;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form#register{
+  margin: 40px;
+} 
+
+label{
+  display: inline-block;
+  clear: left;
+  font-weight: normal;
+  text-align: right;
+  font-size: 13px;
+  width: 125px;
+}
+
+#togglePassword{
+  margin-left: -40px;
+  margin-right: +18px;
+  cursor: pointer;
+  color: black;
+}
+
+.txtCheck, .pwds{
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  outline: 0;
+  padding: 7px;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+}
+
+
+#submit{
+  width: 100px;
+  padding: 7px;
+  font-size: 10px;
+  font-weight: normal;
+  border-radius: 3px;
+  background-color: #22c1c3;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  margin-top: 10px;
+  display: block;
+  font-family: Gilroy-Bold;
+}
+
+label,span,h2{
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+input::-webkit-input-placeholder{
+  font-family: Gilroy-Light;
+  font-size: 12px;
+  text-align: center;
+}
+
+:-moz-placeholder {
+  font-family: Gilroy-Light;
+  font-size: 12px; /* Firefox 18- */
+  text-align: center;  
+}
+
+::-moz-placeholder {
+  font-family: Gilroy-Light;
+  font-size: 12px;  /* Firefox 19+ */
+  text-align: center;  
+}
+
+:-ms-input-placeholder {
+  font-family: Gilroy-Light;
+  font-size: 12px;  
+  text-align: center; 
+}
+
+#message {
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  border-radius: 7px;
+  width: 316.5px;
+  height: 215px;
+  display:none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-42%, +36%);
+  padding-left: 50px;
+  margin:auto;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 12px;
+}
+#message h6{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: whitesmoke;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: #0eff00;
+}
+
+.valid:before {
+  position:relative;
+  left: -35px;
+  content: "\2714";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: #FF0000;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "\01F5F6";
+}
+
+
+.statusafter{
+  color:#0eff00;
+  display: none;
+}
+.statusafter:before{
+  content:"\2714";
+}
+
+.statusbefore{
+    color:#FF0000;
+    display: none;
+    font-size: 20px;
+}
+.statusbefore:before{
+    content:"\01F5F6";
+}
+
+.pafter{
+  color:#0eff00;
+  display: none;
+}
+.pafter:before{
+  color: #0eff00;
+  font-size: 10px;
+  font-weight: bold;
+  content:"Matches!";
+}
+
+.pbefore{
+  /* background-color: blue;
+  color:blue; */
+  display: none;
+}
+.pbefore:before{
+  color: #FF0000;
+  font-size: 10px;
+  font-weight: bold;
+  content:"Doesn't Match!";
+}
+
+.pwafter{
+  background-color: white;
+  border-color: #0eff00; 
+}
+
+.pwafter:before{
+  background-color: white;
+  border-color: #0eff00;
+}
+
+.pwbefore{
+  background-color: #FF8D8D;
+  border-color: #FF0000;
+  display: inline;
+}
+
+.pwbefore:before{
+  background-color: #FF8D8D;
+  border-color: #FF0000;
+  font-size: 10px;
+}
