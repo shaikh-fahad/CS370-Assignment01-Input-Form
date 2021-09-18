@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+# Project: Input Form
 
-You can use the [editor on GitHub](https://fs05452.github.io/CS370-Assignment01-Input-Form/HTML/input_form) to maintain and preview the content for your website in Markdown files.
+The form application can be accessed [here](https://fs05452.github.io/CS370-Assignment01-Input-Form/HTML/input_form).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Structure
 
-### Markdown
+The form itself has a somewhat simple structure which consists of the following elements:
+- Header
+- Input-Fields
+- Labels
+- Icons
+- Button
+- Color Gradient
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+As far as layout is concerned, the form is found at dead-center of the page with all its respective elements perfectly aligned and ordered. Moreover, a color-gradient presides in the background as a styling element.
 
-```markdown
-Syntax highlighted code block
+## Functionality
 
-# Header 1
-## Header 2
-### Header 3
+Despite a somewhat basic-structure, the form offers complete functionality with respect to invalid/valid inputs, completion of the form and the triggering of ```CSS``` to elucidate a response to the user.
 
-- Bulleted
-- List
+Further details on functionality can be found below.
 
-1. Numbered
-2. List
+### Submission
 
-**Bold** and _Italic_ and `Code` text
+Submission of the form cannot occur until and unless the user has filled in all the fields - they are all marked as ```required``` in the ```HTML``` code. Furthermore, a resulting ```XML``` is generated upon successful completion of the form which houses all the data that was input previously. As soon as the aforementioned ```XML``` document is generated, the user is prompted to download the file in addition to being ```alerted``` to open it to view the contents.
 
-[Link](url) and ![Image](src)
-```
+### Input Validation/Invalidation
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Each input field has a ```JavaScript``` function tied to its ```onKeyup``` event wherein the relevant checks are applied with each user key stroke. Depending upon whether the user has entered a valid/invalid input, a specific CSS styling is triggered to display this verification. Specifics of the verification for each input-field are as follows:
+- **First Name** and **Last Name** simply require the field to be filled.
+- **Email** requires a complete and correctly formatted email address - a regex expression is used to test this format.
+- **Password** has a message box display the criteria for what the password must contain.
+- **Confirm Passowrd** is not checked against the password criteria rather it simply must be equal to the value of the above password field.
 
-### Jekyll Themes
+### JavaScript
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fs05452/CS370-Assignment01-Input-Form/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Complete and documented JavaScript code for the project can be found [here](https://fs05452.github.io/CS370-Assignment01-Input-Form/JS/form_script.js) 
 
-### Support or Contact
+### XML File
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+The output ```XML``` file is styled with its own specific set of ```CSS``` rules which can be found [here](https://fs05452.github.io/CS370-Assignment01-Input-Form/Styles/xml_style.css).
+
